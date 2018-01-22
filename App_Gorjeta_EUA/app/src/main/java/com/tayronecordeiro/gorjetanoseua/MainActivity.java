@@ -17,6 +17,10 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
@@ -27,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView texGorjeta;
     private RadioButton rbExcelente, rbMuitoBom, rbRazoavel, rbRuim, rbHorrivel;
     private double porcentagem = 0;
-
+    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +48,14 @@ public class MainActivity extends AppCompatActivity {
         rbRuim = findViewById(R.id.rbRuim);
         rbHorrivel = findViewById(R.id.rbHorrivel);
 
+        //propaganda
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
+        MobileAds.initialize(this, "ca-app-pub-7989714842235622~1506996325");
+
+
 
         texGorjeta.setVisibility(View.GONE);
         textResultado.setVisibility(View.GONE);
@@ -52,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
 
         valorRadioButton();
+
     }
 
 //------------------------ VALOR DE CADA RADIO BUTTON -----------------------------
