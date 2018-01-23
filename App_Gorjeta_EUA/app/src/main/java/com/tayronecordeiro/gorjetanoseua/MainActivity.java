@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         MobileAds.initialize(this, "ca-app-pub-7989714842235622~1506996325");
 
 
-
+        //ocultar textos
         texGorjeta.setVisibility(View.GONE);
         textResultado.setVisibility(View.GONE);
 
