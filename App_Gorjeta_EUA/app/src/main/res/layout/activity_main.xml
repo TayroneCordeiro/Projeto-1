@@ -14,9 +14,56 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="19dp"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="25dp">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    ads:srcCompat="@drawable/ic_app_gorjeta"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/textView9"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/abeezee"
+                    android:text=" Gorjeta nos EUA "
+                    android:textColor="?android:attr/colorBackgroundFloating"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView8"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.design.widget.AppBarLayout>
 
         <com.google.android.gms.ads.AdView
             android:id="@+id/adView"
@@ -32,94 +79,309 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="352dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="8dp"
+            android:layout_width="0dp"
+            android:layout_height="23dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
             android:text="Como foi o atendimento?"
-            android:textAlignment="textStart"
+            android:textAlignment="center"
             android:textColor="@color/colorPrimary"
-            android:textSize="22sp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
-            android:layout_height="29dp"
-            android:text="Valor da conta"
-            android:textAlignment="center"
+            android:layout_height="21dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Valor da conta:"
             android:textColor="@color/colorPrimary"
-            android:textSize="22sp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/appbar" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            ads:srcCompat="@drawable/ruim"
+            app:layout_constraintEnd_toStartOf="@+id/imageView5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="43dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/transparent"
+            android:elevation="10dp"
+            android:scaleType="centerCrop"
+            ads:srcCompat="@drawable/excelente"
+            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            ads:srcCompat="@drawable/muitobom"
+            app:layout_constraintEnd_toStartOf="@+id/imageView3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            ads:srcCompat="@drawable/razoavel"
+            app:layout_constraintEnd_toStartOf="@+id/imageView4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            ads:srcCompat="@drawable/horrivel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ótimo"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bom"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:text="Ruim"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="51dp"
+            android:layout_height="wrap_content"
+            android:text="Péssimo"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Razoável"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView3"
+            app:layout_constraintHorizontal_bias="0.266"
+            app:layout_constraintStart_toStartOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:text="20%"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:text="18%"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15%"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10%"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
         <RadioGroup
             android:id="@+id/radioGroupAtendimento"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2">
+            android:layout_width="264dp"
+            android:layout_height="24dp"
+            android:orientation="horizontal"
+            android:scrollbarAlwaysDrawHorizontalTrack="false"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/textView8">
 
             <RadioButton
                 android:id="@+id/rbExcelente"
-                android:layout_width="wrap_content"
+                android:layout_width="42dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Excelente (20%)"
-                android:textSize="16dp" />
+                android:lineSpacingExtra="30sp"
+                android:orientation="vertical"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/rbMuitoBom"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
             <RadioButton
                 android:id="@+id/rbMuitoBom"
-                android:layout_width="wrap_content"
+                android:layout_width="43dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Muito bom (18%)"
-                android:textSize="16dp" />
+                android:lineSpacingExtra="30sp"
+                android:orientation="vertical"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/rbRazoavel"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/rbExcelente"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
             <RadioButton
                 android:id="@+id/rbRazoavel"
-                android:layout_width="wrap_content"
+                android:layout_width="42dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Razoável (15%)"
-                android:textSize="16dp" />
+                android:lineSpacingExtra="30sp"
+                android:orientation="vertical"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/rbRuim"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/rbMuitoBom"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
             <RadioButton
                 android:id="@+id/rbRuim"
-                android:layout_width="wrap_content"
+                android:layout_width="57dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Ruim (13%)"
-                android:textSize="16dp" />
+                android:lineSpacingExtra="30sp"
+                android:orientation="vertical"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/rbHorrivel"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/rbRazoavel"
+                app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
             <RadioButton
                 android:id="@+id/rbHorrivel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="16dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Horrível (10%)"
-                android:textSize="16dp" />
+                android:lineSpacingExtra="30sp"
+                android:orientation="vertical"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/rbRuim"
+                app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
         </RadioGroup>
 
         <Button
             android:id="@+id/buttonCalcular"
             android:layout_width="0dp"
             android:layout_height="35dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
             android:background="@color/colorPrimary"
             android:onClick="btCalcular"
             android:text="Calcular"
             android:textColor="@android:color/background_light"
             android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
             app:layout_constraintTop_toBottomOf="@+id/radioGroupAtendimento" />
 
         <TextView
             android:id="@+id/textResultado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
             android:text="$ 0,00"
             android:textColor="@android:color/holo_green_dark"
             android:textSize="36sp"
@@ -131,6 +393,8 @@
             android:id="@+id/textGorjeta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:text="A gorjeta será de"
             android:textColor="@android:color/holo_green_dark"
@@ -141,9 +405,10 @@
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/textInputLayout"
-            android:layout_width="0dp"
-            android:layout_height="55dp"
-            android:layout_marginTop="2dp"
+            android:layout_width="276dp"
+            android:layout_height="56dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3">
@@ -155,8 +420,21 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="Ex: 6.50"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:textAlignment="textStart" />
         </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:text="13%"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
